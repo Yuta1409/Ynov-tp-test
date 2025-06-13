@@ -1,5 +1,5 @@
 import unittest
-from fonctions import additionner,est_pair, valider_email, calculer_moyenne, convertir_temperature
+from fonctions import additionner, diviser, est_pair, valider_email, calculer_moyenne, convertir_temperature
 
 class TestFonctions(unittest.TestCase):
 
@@ -64,6 +64,21 @@ class TestFonctions(unittest.TestCase):
     #     """Test additionner avec une erreur volontaire"""
     #     resultat = additionner_erreur(2, 3)
     #     self.assertEqual(resultat, 5)
+    
+    def test_diviser_cas_positif(self):
+        """Test division avec des nombres positifs"""
+        resultat = diviser(10, 2)
+        self.assertEqual(resultat, 5)
+        
+    def test_diviser_cas_negatif(self):
+        """Test division avec des nombres négatifs"""
+        resultat = diviser(-10, -2)
+        self.assertEqual(resultat, 5)
+        
+    def test_diviser_zero(self):
+        """Test division par zéro"""
+        with self.assertRaises(ValueError):
+            diviser(10, 0)
 
 # Permet d'exécuter les tests
 if __name__ == '__main__':

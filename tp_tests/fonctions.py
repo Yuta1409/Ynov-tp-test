@@ -2,6 +2,12 @@ def additionner(a, b):
     """Additionne deux nombres"""
     return a + b
 
+def diviser(a, b):
+    """Divise a par b"""
+    if b == 0:
+        raise ValueError("Division par zéro")
+    return a / b
+
 # def additionner_erreur(a, b):
 #     """Additionne deux nombres"""
 #     return a * b
