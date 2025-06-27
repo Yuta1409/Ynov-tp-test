@@ -51,3 +51,16 @@ class TestBookBorrowing:
         self.book.borrow()
         result = self.book.borrow()
         assert result == False
+        
+    # Dans test_book.py, ajoutez :
+    def test_return_book_not_borrowed_fails(self):
+        """Test retour livre non emprunté"""
+        result = self.book.return_book()
+        assert result == False
+
+    def test_return_borrowed_book_success(self):
+        """Test retour livre emprunté"""
+        self.book.borrow()
+        result = self.book.return_book()
+        assert result == True
+        assert self.book.is_available() == True

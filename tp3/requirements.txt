@@ -1,0 +1,19 @@
+# TODO: Listez les dépendances de production
+# (aucune pour ce projet simple)
+# TODO: Listez les dépendances de développement
+pytest>=7.0.0
+pytest-cov>=4.0.0
+
+#Commande 1
+pytest
+
+#Commande 2
+pytest -v
+
+# Commande 3
+pytest tests/test_book.py
+
+# Commande 4
+pytest tests/test_book.py::TestBookCreation::test_create_valid_book
+
+
