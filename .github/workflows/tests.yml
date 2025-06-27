@@ -21,9 +21,9 @@ jobs:
       - name: Run tests
         run: |
           cd tp3
-          pytest src/tests/ -v
+          PYTHONPATH=. pytest src/tests/ -v
       
       - name: Generate coverage report
         run: |
           cd tp3
-          pytest --cov=src/bibliotheque --cov-report=xml --cov-report=html src/tests/
+          PYTHONPATH=. pytest --cov=src/bibliotheque --cov-report=xml --cov-report=html src/tests/
