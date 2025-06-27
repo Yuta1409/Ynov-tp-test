@@ -21,7 +21,7 @@ jobs:
       - name: Run tests
         run: |
           cd tp3
-          pytest src/tests/ -v
+          pytest tests/ -v
       
       - name: Generate coverage report
         run: |
